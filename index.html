@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bruno amá stephan</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bfc5e9503c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <!-----header----->
+
+    <section id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">home</a></li>
+                    <li><a href="#about" id="lng-about">about</a></li>
+                    <li><a href="#services" id="lng-services">services</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#contact" id="lng-contact">contact</a></li>
+                    <li>
+                        <select id="language" class="language">
+                            <option>eng</option>
+                            <option>por</option>
+                        </select>
+                    </li>
+                    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onClick="openMenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>game designer | UI/UX designer</p>
+                <h1 id="lng-header-text">hi, i'm <span>b</span>runo <span>a</span>má <span>s</span>tephan<br> from brazil</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-----about----->
+
+    <section id="about">
+        <div class="container reveal">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title" id="lng-about-me">about me</h1>
+                    <p class="about-text" id="lng-about-text1">My first bachelor's degree was in architecture and urban design at FAU USP.
+                    While studying, I have done internships at Nitsche Arquitetos and at the São Paulo City Hall Secretariat of Culture. 
+                    After graduation, I have worked as an architect at Triptyque Architecture and MNMA. </p>
+                    <p class="about-text" id="lng-about-text2"> Now, at 30, I am looking for a career in technology and studying Computer Science at IME USP.
+                    I am part of USP Game Dev as a collaborator developing digital games and
+                    I have participated in the /de/monumenta project developing an app for USP.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links" onclick="openTab(event, 'skills')" id="lng-skills">skills</p>
+                        <p class="tab-links" onclick="openTab(event, 'experience')" id="lng-experience">experience</p>
+                        <p class="tab-links" onclick="openTab(event, 'education')" id="lng-education">education</p>
+                    </div>
+
+                    <div class="tab-contents" id="skills">
+                        <ul class="skills-ul">
+                            <li><span>Game Engine | Unity</span><p id="lng-skills1">Advanced</p></li>
+                            <li><span>Game Engine | Godot</span><p id="lng-skills2">Intermediate</p></li>
+                            <li><span id="lng-skills3">Programming | Python</span><p id="lng-skills4">Advanced</p></li>
+                            <li><span id="lng-skills5">Programming | C#</span><p id="lng-skills6">Advanced</p></li>
+                            <li><span id="lng-skills7">Programming | Java</span><p id="lng-skills8">Intermediate</p></li>
+                            <li><span id="lng-skills9">Programming | HTML/CSS/Javascript</span><p id="lng-skills10">Intermediate</p></li>
+                            <li><span id="lng-skills11">Programming | React Native</span><p id="lng-skills12">Beginner</p></li>
+                            <li><span>Design | Adobe Photoshop</span><p id="lng-skills13">Advanced</p></li>
+                            <li><span>Design | Adobe Illustrator</span><p id="lng-skills14">Advanced</p></li>
+                            <li><span>Design | Adobe InDesign</span><p id="lng-skills15">Advanced</p></li>
+                            <li><span>Design | Aseprite</span><p id="lng-skills16">Advanced</p></li>
+                            <li><span>Design | Adobe AfterEffects</span><p id="lng-skills17">Intermediate</p></li>
+                            <li><span>Design | Adobe Premiere</span><p id="lng-skills18">Intermediate</p></li>
+                            <li><span>Design | Adobe XD</span><p id="lng-skills19">Intermediate</p></li>
+                            <li><span>Design | Figma</span><p id="lng-skills20">Intermediate</p></li>
+                            <li><span id="lng-skills21">3D Modelling | SketchUp</span><p id="lng-skills22">Advanced</p></li>
+                            <li><span id="lng-skills23">3D Modelling | Blender</span><p id="lng-skills24">Intermediate</p></li>
+                            <li><span id="lng-skills25">Language | Portuguese</span><p id="lng-skills26">Native</p></li>
+                            <li><span id="lng-skills27">Language | English</span><p id="lng-skills28">Proficient</p></li>
+                            <li><span id="lng-skills29">Language | Italian</span><p id="lng-skills30">Advanced</p></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Nitsche Arquitetos</span><p id="lng-experience1">Intern | 2014</p><a href="https://www.nitsche.com.br/" target="_blank"> www.nitsche.com.br</a></li>
+                            <li><span>GTO SMC (São Paulo City Hall)</span><p id="lng-experience2">Intern | 2016</p><a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/cultura/" target="_blank"> www.prefeitura.sp.gov.br</a></li>
+                            <li><span>Triptyque Architecture</span><p id="lng-experience3">Jr Architect | 2018</p><a href="https://triptyque.com/en/" target="_blank"> www.triptyque.com</a></li>
+                            <li><span>MNMA</span><p id="lng-experience4">Architect | 2019</p><a href="https://www.instagram.com/mnmastudio/" target="_blank" id="mnma-instagram"> MNMA on Instagram</a></li>
+                            <li><span>Archflex</span><p id="lng-experience5">Researcher | 2020</p><a href="https://archflex.com.br/" target="_blank"> www.archflex.com.br</a></li>
+                            <li><span>USP Game Dev</span><p id="lng-experience6">Collaborator | 2020 - Now</p><a href="https://usp.game.dev.br/" target="_blank"> www.usp.game.dev.br</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>FAU USP</span><p>2011 | 2017</p><p id="lng-education1">Architecture and Urban Design</p></li>
+                            <li><span>Politecnico di Milano</span><p>2014 | 2015</p><p>Architettura delle Costruzioni</p></li>
+                            <li><span>IME USP</span><p id="lng-education2">2020 | Now</p><p id="lng-education3">Computer Science</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-----services----->
+    
+    <section id="services">
+        <div class="container reveal">
+            <h1 class="sub-title" id="lng-my-services">my services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>game design</h2>
+                    <p id="lng-services-game-design">It is my main activity right now. I have been designing games independently in the past years and I am currently looking for a full-time job in this field.</p>
+                    <a href="lm-game-design.html" id="lng-learn-more1">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-object-group"></i>
+                    <h2>web design</h2>
+                    <p id="lng-services-web-design">I have actually made this portfolio by myself from scratch in vanilla HTML/CSS/Javascript, and I intend to do much more.</p>
+                    <a href="lm-web-design.html" id="lng-learn-more2">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX design</h2>
+                    <p id="lng-services-UIUX-design">As a designer I prefer working with transdisciplinary approaches. This is why I am familiar with Discovery and Research frameworks as well as graphic design as a whole.</p>
+                    <a href="lm-uxui-design.html" id="lng-learn-more3">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h2>app design</h2>
+                    <p id="lng-services-app-design">I have worked with a few apps before. In my experience, developing them is a mix between UX/UI design and game design.</p>
+                    <a href="lm-app-design.html" id="lng-learn-more4">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2 id="lng-services-front-end-header">front-end developing</h2>
+                    <p id="lng-services-front-end">Although I have learned full-stack and back-end developing skills while studying Computer Science, front-end development is my prefered method of dealing with code.</p>
+                    <a href="lm-front-end-dev.html" id="lng-learn-more5">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-building"></i>
+                    <h2 id="lng-services-arch-header">architecture and urban design</h2>
+                    <p id="lng-services-arch">Even though working as a constant architect hasn't really been a possibility in my life for some years, I still do small, independent renovations from time to time and I am very proud of my previous jobs as an architect.</p>
+                    <a href="lm-arch-urb.html" id="lng-learn-more6">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-----portfolio----->
+
+    <section id="portfolio">
+        <div class="container reveal">
+            <h1 class="sub-title">my work</h1>
+            
+            <div class="work_filter filter-work">
+                <div data-filter="*" class="filter-work_item active-filter" type="button" id="lng-work-filter-all">all</div>
+                <div data-filter="games" class="filter-work_item" type="button" id="lng-work-filter-games">games</div>
+                <div data-filter="apps" class="filter-work_item" type="button" id="lng-work-filter-apps">apps</div>
+                <div data-filter="art" class="filter-work_item" type="button" id="lng-work-filter-art">art</div>                
+                <div data-filter="arch" class="filter-work_item" type="button" id="lng-work-filter-arch">arch</div>
+            </div>
+
+            <div class="work-list">
+                <div class="work" data-filter="games">
+                    <a href="slider-rogue-fungi.html" class="work-image">
+                        <img src="capas/rogue_fungi.png">
+                        <div class="layer">
+                            <h3>rogue fungi</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="games">
+                    <a href="slider-imobilidade-urbana.html" class="work-image">
+                        <img src="capas/imobilidade_urbana.png">
+                        <div class="layer">
+                            <h3>imobilidade urbana</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="games">
+                    <a href="slider-fome-pressa.html" class="work-image">
+                        <img src="capas/quem_tem_fome.png">
+                        <div class="layer">
+                            <h3>quem tem fome tem pressa</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="games">
+                    <a href="slider-saindo-buraco.html" class="work-image">
+                        <img src="capas/saindo_do_buraco.png">
+                        <div class="layer">
+                            <h3>saindo do buraco</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="games">
+                    <a href="slider-going-meta.html" class="work-image">
+                        <img src="capas/going_meta.png">
+                        <div class="layer">
+                            <h3>going meta</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="games">
+                    <a href="slider-cosmic-mistake.html" class="work-image">
+                        <img src="capas/fenrir.png">
+                        <div class="layer">
+                            <h3>a cosmic mistake</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="games">
+                    <a href="slider-loneliness-calls.html" class="work-image">
+                        <img src="capas/loneliness_calls.png">
+                        <div class="layer">
+                            <h3>loneliness calls</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                
+                <div class="work" data-filter="apps">
+                    <a href="slider-demonumentar.html" class="work-image">
+                        <img src="capas/demonumenta.png">
+                        <div class="layer">
+                            <h3>/de/monument/AR/</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+
+                <div class="work" data-filter="art">
+                    <a href="slider-illustrations.html" class="work-image">
+                        <img src="capas/ilustracoes.png">
+                        <div class="layer">
+                            <h3 id="lng-work-list-ilustrations">illustrations</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="art">
+                    <a href="slider-pixel-art.html" class="work-image">
+                        <img src="capas/pixel_art.png">
+                        <div class="layer">
+                            <h3>pixel art</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+
+                <div class="work" data-filter="arch">
+                    <a href="slider-dois-tropicos.html" class="work-image">
+                        <img src="capas/2t.png">
+                        <div class="layer">
+                            <h3>dois trópicos</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="arch">
+                    <a href="slider-pl-house.html" class="work-image">
+                        <img src="capas/casa_pl.png">
+                        <div class="layer">
+                            <h3 id="lng-work-list-pl-house">pl house</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="arch">
+                    <a href="slider-ts-apartment.html" class="work-image">
+                        <img src="capas/ap_ts.png">
+                        <div class="layer">
+                            <h3  id="lng-work-list-ts-apartment">ts apartment</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="arch">
+                    <a href="slider-seb-sacre-couer.html" class="work-image">
+                        <img src="capas/seb.png">
+                        <div class="layer">
+                            <h3>seb sacré couer</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="arch">
+                    <a href="slider-marambaia.html" class="work-image">
+                        <img src="capas/marambaia.png">
+                        <div class="layer">
+                            <h3>marambaia</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="arch">
+                    <a href="slider-bixiga.html" class="work-image">
+                        <img src="capas/bixiga.png">
+                        <div class="layer">
+                            <h3>bixiga</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="arch">
+                    <a href="slider-angra.html" class="work-image">
+                        <img src="capas/angra.png">
+                        <div class="layer">
+                            <h3>angra</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="arch">
+                    <a href="slider-ironhouse.html" class="work-image">
+                        <img src="capas/ironhouse.png">
+                        <div class="layer">
+                            <h3>ironhouse</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="arch">
+                    <a href="slider-cura.html" class="work-image">
+                        <img src="capas/cura2.png">
+                        <div class="layer">
+                            <h3>{cura} 2</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+                <div class="work" data-filter="arch">
+                    <a href="slider-infopoint.html" class="work-image">
+                        <img src="capas/infopoint.png">
+                        <div class="layer">
+                            <h3>infopoint rio de janeiro</h3>
+                        </div>
+                    </a>
+                    <div class="portfolio-grid"></div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-----contact----->
+
+    <section id="contact">
+        <div class="container reveal">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title" id="lng-contact-me">contact me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>brunoastephan@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+55 11 965881810</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/bruno-am%C3%A1-stephan//" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/bruno.astephan/" target="_blank"><i class="fab fa-instagram" ></i></a>
+                    </div>
+                    <a href="CV/CV 2024 ENG.pdf" download="" class="download-cv" id="lng-download-cv">download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="your name" autocomplete="given-name" required>
+                        <input type="email" name="Email" placeholder="your email" autocomplete="off" required>
+                        <textarea name="Message" rows="6" placeholder="your message"></textarea>
+                        <button type="submit" class="submit" id="lng-submit-button">submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-----footer----->
+
+    <div class="footer">
+        <div class="copyright">copyright © bruno stephan</div>
+    </div>
+
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arch & urb</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="lm-style.css">
+    <script src="https://kit.fontawesome.com/bfc5e9503c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <!-----header----->
+
+    <section id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">home</a></li>
+                    <li>
+                        <select id="language" class="language">
+                            <option>eng</option>
+                            <option>por</option>
+                        </select>
+                    </li>
+                    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onClick="openMenu()"></i>
+            </nav>
+        </div>
+    </section>
+
+    <!-----about project----->
+
+    <section class="about-project">
+        <div class="container">
+            <h1 class="sub-title" id="lng-sub-title">architecture and urban design</h1>
+            <p class="about-text" id="lng-about-text1">Even though working as a constant architect hasn't really been a possibility in my life for some years, I still do small, independent renovations from time to time and I am very proud of my previous jobs as an architect.</p>
+            <p class="about-text" id="lng-about-text2">The following are some important links:</p>
+            <div class="link">
+                <a class="about-text-link" href="https://issuu.com/brunoastephan/docs/portfolio_2020_bruno_stephan_profissiona_issuu" target="_blank" id="lng-link1">My previous portfolio.</a>
+            </div>
+            <div class="link">
+                <a class="about-text-link" href="https://issuu.com/brunoastephan/docs/caderno_para_o_issuu/5" target="_blank" id="lng-link2">My Undergraduate thesis in architecture school.</a>
+            </div>
+        </div>
+    </section>
+
+    <!-----footer----->
+
+    <div class="footer">
+        <div class="copyright">copyright © bruno stephan</div>
+    </div>
+
+    <script src="slider.js"></script>
+
+    <script>
+        const jsonPOR = {
+            "lng-sub-title": "arquitetura e urbanismo",
+            "lng-about-text1": "Mesmo que trabalhar integralmente como arquiteto não tenha se colocado como possibilidade real para mim por alguns anos, eu ainda faço pequenas reformas independentes e tenho bastante orgulho do meu trabalho prévio como arquiteto.",
+            "lng-about-text2": "A seguir estão alguns links importantes:",
+            "lng-link1": "Meu último portfolio.",
+            "lng-link2": "Meu Trabalho de Conclusão de Curso.",
+        }
+
+        const jsonENG = {
+            "lng-sub-title": "architecture and urban design",
+            "lng-about-text1": "Even though working as a constant architect hasn't really been a possibility in my life for some years, I still do small, independent renovations from time to time and I am very proud of my previous jobs as an architect.",
+            "lng-about-text2": "The following are some important links:",
+            "lng-link1": "My previous portfolio.",
+            "lng-link1": "My Undergraduate thesis in architecture school.",
+        }
+
+        document.querySelector('#language').addEventListener("change", function() {
+            if (this.value == "eng") {
+                // change all text to ENG
+                for (let key in jsonENG) {
+                document.querySelector('#' + key).textContent = jsonENG[key]
+                }
+            } else if (this.value == "por") {
+                // change all text to POR
+                for (let key in jsonPOR) {
+                document.querySelector('#' + key).textContent = jsonPOR[key]
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

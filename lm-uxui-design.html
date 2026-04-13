@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ux/ui design</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="lm-style.css">
+    <script src="https://kit.fontawesome.com/bfc5e9503c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <!-----header----->
+
+    <section id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">home</a></li>
+                    <li>
+                        <select id="language" class="language">
+                            <option>eng</option>
+                            <option>por</option>
+                        </select>
+                    </li>
+                    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onClick="openMenu()"></i>
+            </nav>
+        </div>
+    </section>
+
+    <!-----about project----->
+
+    <section class="about-project">
+        <div class="container">
+            <h1 class="sub-title">ux/ui design</h1>
+            <p class="about-text" id="lng-about-text1">As a designer I prefer working with transdisciplinary approaches. This is why I am familiar with Discovery and Research frameworks as well as graphic design as a whole.</p>
+        </div>
+    </section>
+
+    <!-----footer----->
+
+    <div class="footer">
+        <div class="copyright">copyright © bruno stephan</div>
+    </div>
+
+    <script src="slider.js"></script>
+
+    <script>
+        const jsonPOR = {
+            "lng-about-text1": "Como um designer, prefiro trabalhar com metodologias transdisciplinares. É por isso que estou familiarizado com frameworks de Discovery e Research assim como a atividade de design gráfico como um todo.",
+        }
+
+        const jsonENG = {
+            "lng-about-text1": "As a designer I prefer working with transdisciplinary approaches. This is why I am familiar with Discovery and Research frameworks as well as graphic design as a whole.",
+        }
+
+        document.querySelector('#language').addEventListener("change", function() {
+            if (this.value == "eng") {
+                // change all text to ENG
+                for (let key in jsonENG) {
+                document.querySelector('#' + key).textContent = jsonENG[key]
+                }
+            } else if (this.value == "por") {
+                // change all text to POR
+                for (let key in jsonPOR) {
+                document.querySelector('#' + key).textContent = jsonPOR[key]
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

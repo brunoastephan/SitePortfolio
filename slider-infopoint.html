@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>infopoint rio de janeiro</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="slider-style-5.css">
+    <script src="https://kit.fontawesome.com/bfc5e9503c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <!-----header----->
+
+    <section id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">home</a></li>
+                    <li>
+                        <select id="language" class="language">
+                            <option>eng</option>
+                            <option>por</option>
+                        </select>
+                    </li>
+                    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onClick="openMenu()"></i>
+            </nav>
+        </div>
+    </section>
+
+    <!-----slider----->
+        
+    <section class="slider">        
+        <div class="slider-content">
+
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
+            <input type="radio" name="btn-radio" id="radio4">
+            <input type="radio" name="btn-radio" id="radio5">
+
+            <div class="slide-box first">
+                <img class="img-desktop" src="sliders/infopoint/01.png" alt="slide 1">
+                <img class="img-mobile" src="sliders/infopoint/mobile/01mob.png" alt="slide 1 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/infopoint/02.png" alt="slide 2">
+                <img class="img-mobile" src="sliders/infopoint/mobile/02mob.png" alt="slide 2 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/infopoint/03.png" alt="slide 3">
+                <img class="img-mobile" src="sliders/infopoint/mobile/03mob.png" alt="slide 3 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/infopoint/04.png" alt="slide 4">
+                <img class="img-mobile" src="sliders/infopoint/mobile/04mob.png" alt="slide 4 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/infopoint/05.png" alt="slide 5">
+                <img class="img-mobile" src="sliders/infopoint/mobile/05mob.png" alt="slide 5 mobile">
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+            </div>
+
+        <div> 
+    </section>
+
+    <!-----about project----->
+
+    <section class="about-project">
+        <div class="container">
+            <h1 class="sub-title">infopoint rio de janeiro</h1>
+            <p class="about-text" id="lng-about-text1">A building of itinerant, portable, and democratic character implies a modular design, composed of versatile, spacious, and open spaces. The fluidity and continuity of the environments are imperative to optimize their uses and transform them into places of permanence. Thus, aiming at the project of an information point for the Olympics on Copacabana Beach in Rio de Janeiro, an extremely lightweight and easily assembled construction was conceived here, with a subtle lighting design and framing of the sea through a large ramp, which would be the main circulation axis (connecting the entrance of the Museum of Image and Sound - MIS - to the sea) and would also function as an exhibition space.</p>
+            <p class="about-text" id="lng-about-text2">The project is primarily composed of a series of wooden structures forming 15-meter spans and 2.5-meter balconies on both sides. These would also be formed by box beams with steel uprights, which, by exerting a counter-curve on the large cantilever, would allow the primary use of wood in bending. Its assembly would take place on the ground and, subsequently, would be lifted by cranes and positioned on concrete footings that would use tires as formwork. The bracing would be done with a wooden grille, which would filter the light in the pavilion. The walls dividing the spaces would be constructed with wood-frame panels covered with cementitious boards. All these aspects of the construction system would allow for an extremely efficient and rapid assembly of the work, and its replicability in various situations.</p>
+            <p class="about-text" id="lng-about-text3">For the provided implementation, which is part of the Olympic Triathlon route, a project with elements that refer to the three exercises that make up this test was considered: the ramp, the use of external showers and lockers, and the bike rack (which also connects with the bike path that runs through the beach) are all equipment that addresses the issue of sports. The large void that makes up the sports area can be used for classes and practices that promote physical activity.</p>
+            <p class="about-text" id="lng-about-text4">In the application of the program, simplicity was a paradigmatic aspect. Simple forms were determined with the volumes, enclosing environments only when necessary (in the service area and bathrooms). The store was connected to the café through a single fixed piece of furniture that recalls the curves of the sea, the sidewalk, and the nearby museum, functioning as both a counter and a bench.</p>
+<!--             <div class="link">
+                <a class="about-text-link" href="https://brunoastephan.itch.io/a-cosmic-mistake" target="_blank" id="lng-link">Learn more.</a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-----footer----->
+
+    <div class="footer">
+        <div class="copyright">copyright © bruno stephan</div>
+    </div>
+
+    <script src="slider.js"></script>
+
+    <script>
+        const jsonPOR = {
+            "lng-about-text1": "Um edifício de caráter itinerante, desmontável e democrático implica em um projeto modular, composto por espaços polivalentes, amplos e abertos. A fluidez e continuidade dos ambientes é imperativa para otimizar seus usos e transformálos em lugares de permanência. Dessa forma, visando o projeto de um ponto de informações para as Olimpíadas na Praia de Copacabana no Rio de Janeiro, foi pensada aqui uma construção de extrema leveza e de fácil montagem, com um desenho sutil de luz e com um enquadramento do mar por intermédio de uma grande rampa, que seria o eixo principal de circulação (ligando o a entrada do Museu da Imagem e Som - MIS - ao mar) e também funcionaria como espaço expositivo.",
+            "lng-about-text2": "O projeto é composto primeiramente por uma série de estruturas de madeira conformando vãos de 15 metros e varandas de 2,5 metros para ambos os lados. Seriam estas ainda formadas por vigas vagonadas com montantes de aço, que, ao exercer uma contra-flecha no grande balanço, permitiriam o uso primário da madeira na flexão. Sua montagem aconteceria no solo e, posteriormente, seriam erguidas por gruas e posicionadas em sapatas de concreto que utilizariam pneus como fôrma. O travamento seria feito com uma grelha também de madeira, que filtraria a luz no pavilhão. As paredes que dividem os espaços seriam construídas com painéis de woodframe revestidos de placas cimentícias. Todos esses aspectos do sistema construtivo permitiriam uma montagem extremamente eficiente e rápida da obra, e sua replicabilidade em diversas situações.",
+            "lng-about-text3": "Para a implantação fornecida, que é parte do trajeto do Triathlon Olímpico, pensou-se em um projeto com elementos que remeteriam aos três exercícios que compõem essa prova: a rampa, o uso de chuveiros e armários externos e o bicicletário (que se articula também com a ciclovia que perpassa a praia) são todos equipamentos que retomam a questão do esporte. O grande vazio que compõe a área esportiva pode ser utilizado para a realização de aulas e práticas que fomentam a atividade física.",
+            "lng-about-text4": "Na aplicação do programa, a simplicidade foi um aspecto paradigmático. Determinou-se com os volumes formas simples, enclausurando ambientes somente quando necessário (na área de serviço e sanitários). A loja foi ligada ao café por meio de um único móvel fixo que retoma as curvas do mar, da calçada e do MIS, funcionando tanto como balcão quanto como banco.",
+            // "lng-link": "Saiba mais."
+        }
+
+        const jsonENG = {
+            "lng-about-text1": "A building of itinerant, portable, and democratic character implies a modular design, composed of versatile, spacious, and open spaces. The fluidity and continuity of the environments are imperative to optimize their uses and transform them into places of permanence. Thus, aiming at the project of an information point for the Olympics on Copacabana Beach in Rio de Janeiro, an extremely lightweight and easily assembled construction was conceived here, with a subtle lighting design and framing of the sea through a large ramp, which would be the main circulation axis (connecting the entrance of the Museum of Image and Sound - MIS - to the sea) and would also function as an exhibition space.",
+            "lng-about-text2": "The project is primarily composed of a series of wooden structures forming 15-meter spans and 2.5-meter balconies on both sides. These would also be formed by box beams with steel uprights, which, by exerting a counter-curve on the large cantilever, would allow the primary use of wood in bending. Its assembly would take place on the ground and, subsequently, would be lifted by cranes and positioned on concrete footings that would use tires as formwork. The bracing would be done with a wooden grille, which would filter the light in the pavilion. The walls dividing the spaces would be constructed with wood-frame panels covered with cementitious boards. All these aspects of the construction system would allow for an extremely efficient and rapid assembly of the work, and its replicability in various situations.",
+            "lng-about-text3": "For the provided implementation, which is part of the Olympic Triathlon route, a project with elements that refer to the three exercises that make up this test was considered: the ramp, the use of external showers and lockers, and the bike rack (which also connects with the bike path that runs through the beach) are all equipment that addresses the issue of sports. The large void that makes up the sports area can be used for classes and practices that promote physical activity.",
+            "lng-about-text4": "In the application of the program, simplicity was a paradigmatic aspect. Simple forms were determined with the volumes, enclosing environments only when necessary (in the service area and bathrooms). The store was connected to the café through a single fixed piece of furniture that recalls the curves of the sea, the sidewalk, and the nearby museum, functioning as both a counter and a bench.",
+            // "lng-link": "Learn more."
+        }
+
+        document.querySelector('#language').addEventListener("change", function() {
+            if (this.value == "eng") {
+                // change all text to ENG
+                for (let key in jsonENG) {
+                document.querySelector('#' + key).textContent = jsonENG[key]
+                }
+            } else if (this.value == "por") {
+                // change all text to POR
+                for (let key in jsonPOR) {
+                document.querySelector('#' + key).textContent = jsonPOR[key]
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

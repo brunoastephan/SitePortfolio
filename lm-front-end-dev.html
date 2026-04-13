@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>front-end dev</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="lm-style.css">
+    <script src="https://kit.fontawesome.com/bfc5e9503c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <!-----header----->
+
+    <section id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">home</a></li>
+                    <li>
+                        <select id="language" class="language">
+                            <option>eng</option>
+                            <option>por</option>
+                        </select>
+                    </li>
+                    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onClick="openMenu()"></i>
+            </nav>
+        </div>
+    </section>
+
+    <!-----about project----->
+
+    <section class="about-project">
+        <div class="container">
+            <h1 class="sub-title" id="lng-sub-title">front-end developing</h1>
+            <p class="about-text" id="lng-about-text1">Although I have learned full-stack and back-end developing skills while studying Computer Science, front-end development is my prefered method of dealing with code.</p>
+            <p class="about-text" id="lng-about-text2">The following are some important links:</p>
+            <div class="link">
+                <a class="about-text-link" href="https://github.com/brunoastephan" target="_blank" id="lng-link1">My GitHub profile.</a>
+            </div>
+        </div>
+    </section>
+
+    <!-----footer----->
+
+    <div class="footer">
+        <div class="copyright">copyright © bruno stephan</div>
+    </div>
+
+    <script src="slider.js"></script>
+
+    <script>
+        const jsonPOR = {
+            "lng-sub-title": "front-end",
+            "lng-about-text1": "Embora tenha desenvolvido habilidades com programação full-stack e back-end enquanto estudava Ciências da Computação, front-end é minha frente de trabalho preferida ao lidar com código.",
+            "lng-about-text2": "A seguir estão alguns links importantes:",
+            "lng-link1": "Meu perfil do GitHub.",
+        }
+
+        const jsonENG = {
+            "lng-sub-title": "front-end developing",
+            "lng-about-text1": "Although I have learned full-stack and back-end developing skills while studying Computer Science, front-end development is my prefered method of dealing with code.",
+            "lng-about-text2": "The following are some important links:",
+            "lng-link1": "My GitHub profile.",
+        }
+
+        document.querySelector('#language').addEventListener("change", function() {
+            if (this.value == "eng") {
+                // change all text to ENG
+                for (let key in jsonENG) {
+                document.querySelector('#' + key).textContent = jsonENG[key]
+                }
+            } else if (this.value == "por") {
+                // change all text to POR
+                for (let key in jsonPOR) {
+                document.querySelector('#' + key).textContent = jsonPOR[key]
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

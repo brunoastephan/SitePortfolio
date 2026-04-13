@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bixiga cultural</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="slider-style-7.css?v1">
+    <script src="https://kit.fontawesome.com/bfc5e9503c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <!-----header----->
+
+    <section id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">home</a></li>
+                    <li>
+                        <select id="language" class="language">
+                            <option>eng</option>
+                            <option>por</option>
+                        </select>
+                    </li>
+                    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onClick="openMenu()"></i>
+            </nav>
+        </div>
+    </section>
+
+    <!-----slider----->
+        
+    <section class="slider">        
+        <div class="slider-content">
+
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
+            <input type="radio" name="btn-radio" id="radio4">
+            <input type="radio" name="btn-radio" id="radio5">
+            <input type="radio" name="btn-radio" id="radio6">
+            <input type="radio" name="btn-radio" id="radio7">
+
+            <div class="slide-box first">
+                <img class="img-desktop" src="sliders/bixiga/01.png" alt="slide 1">
+                <img class="img-mobile" src="sliders/bixiga/mobile/01mob.png" alt="slide 1 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/bixiga/02.png" alt="slide 2">
+                <img class="img-mobile" src="sliders/bixiga/mobile/02mob.png" alt="slide 2 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/bixiga/03.png" alt="slide 3">
+                <img class="img-mobile" src="sliders/bixiga/mobile/03mob.png" alt="slide 3 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/bixiga/04.png" alt="slide 4">
+                <img class="img-mobile" src="sliders/bixiga/mobile/04mob.png" alt="slide 4 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/bixiga/05.png" alt="slide 5">
+                <img class="img-mobile" src="sliders/bixiga/mobile/05mob.png" alt="slide 5 mobile">
+            </div>
+            
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/bixiga/06.png" alt="slide 6">
+                <img class="img-mobile" src="sliders/bixiga/mobile/06mob.png" alt="slide 6 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/bixiga/07.png" alt="slide 7">
+                <img class="img-mobile" src="sliders/bixiga/mobile/07mob.png" alt="slide 7 mobile">
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+                <div class="auto-btn6"></div>
+                <div class="auto-btn7"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+                <label for="radio6" class="manual-btn"></label>
+                <label for="radio7" class="manual-btn"></label>
+            </div>
+
+        <div> 
+    </section>
+
+    <!-----about project----->
+
+    <section class="about-project">
+        <div class="container">
+            <h1 class="sub-title">bixiga cultural</h1>
+            <p class="about-text" id="lng-about-text1">In this project, we needed to build a theater with over 2500 seats for the Bixiga neighborhood.</p>
+            <p class="about-text" id="lng-about-text2">After changes in the company's management, it was requested that the size of the theater be reduced, which led the office to propose burying its structure. This would then create a huge square, which in turn would configure a more complex program. From the old theater emerged the idea of a cultural center - the Bixiga Cultural. The theater, now reduced, sits below an extensive central open space, fully traversable. The audience area can open up to the exterior and, combined with the bleachers of the square, become a continuous structure, ideal for open-air shows.</p>
+            <p class="about-text" id="lng-about-text3">Surrounding this open area would be small volumes, boxes arranged to replicate (in terms of style) the eclectic style of the Bixiga's houses. These volumes would house music studios, bars, dance class rooms, sports practice areas, and shops, as well as extensive balconies. These would establish communication with the existing historical elements on our site without altering their characteristics.</p>
+<!--             <div class="link">
+                <a class="about-text-link" href="https://ntmtst.itch.io/imobilidade-urbana" target="_blank" id="lng-link">Learn more.</a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-----footer----->
+
+    <div class="footer">
+        <div class="copyright">copyright © bruno stephan</div>
+    </div>
+
+    <script src="slider.js"></script>
+
+    <script>
+        const jsonPOR = {
+            "lng-about-text1": "Neste projeto, precisávamos construir um teatro com mais de 2500 assentos para o Bixiga.",
+            "lng-about-text2": "Após mudanças na gestão da empresa, foi pedido que o tamanho do teatro fosse reduzido, o que levou o escritório a propor que se enterrasse sua estrutura. Isso criaria então uma enorme praça, que por sua vez configuraria um programa mais complexo. Do antigo teatro nasceu a ideia então de um centro cultural - o Bixiga Cultural. O teatro, agora reduzido, fica abaixo de um extenso miolo de quadra livre, plenamente atravessável. A plateia pode se abrir para o exterior e com a arquibancada da praça, se tornar uma estrutura contínua, ideal para shows abertos.",
+            "lng-about-text3": "Nos arredores dessa região aberta seriam abrigadas pequenos volumes, caixas dispostas para replicar (em termos) o estilo eclético do casario do Bixiga. Esses volumes seriam estúdios de música, bares, salas para aula de dança, prática de esporte e lojas, além de extensas varandas. Estas realizariam a comunicação com os elementos históricos existentes no nosso terreno sem descaracterizá-los.",
+            // "lng-link": "Saiba mais."
+        }
+
+        const jsonENG = {
+            "lng-about-text1": "In this project, we needed to build a theater with over 2500 seats for the Bixiga neighborhood.",
+            "lng-about-text2": "After changes in the company's management, it was requested that the size of the theater be reduced, which led the office to propose burying its structure. This would then create a huge square, which in turn would configure a more complex program. From the old theater emerged the idea of a cultural center - the Bixiga Cultural. The theater, now reduced, sits below an extensive central open space, fully traversable. The audience area can open up to the exterior and, combined with the bleachers of the square, become a continuous structure, ideal for open-air shows.",
+            "lng-about-text3": "Surrounding this open area would be small volumes, boxes arranged to replicate (in terms of style) the eclectic style of the Bixiga's houses. These volumes would house music studios, bars, dance class rooms, sports practice areas, and shops, as well as extensive balconies. These would establish communication with the existing historical elements on our site without altering their characteristics.",
+            // "lng-link": "Learn more."
+        }
+
+        document.querySelector('#language').addEventListener("change", function() {
+            if (this.value == "eng") {
+                // change all text to ENG
+                for (let key in jsonENG) {
+                document.querySelector('#' + key).textContent = jsonENG[key]
+                }
+            } else if (this.value == "por") {
+                // change all text to POR
+                for (let key in jsonPOR) {
+                document.querySelector('#' + key).textContent = jsonPOR[key]
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

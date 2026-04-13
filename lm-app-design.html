@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>app design</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="lm-style.css">
+    <script src="https://kit.fontawesome.com/bfc5e9503c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <!-----header----->
+
+    <section id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">home</a></li>
+                    <li>
+                        <select id="language" class="language">
+                            <option>eng</option>
+                            <option>por</option>
+                        </select>
+                    </li>
+                    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onClick="openMenu()"></i>
+            </nav>
+        </div>
+    </section>
+
+    <!-----about project----->
+
+    <section class="about-project">
+        <div class="container">
+            <h1 class="sub-title">app design</h1>
+            <p class="about-text" id="lng-about-text1">I have worked with a few apps before. In my experience, developing them is a mix between UX/UI design and game design.</p>
+            <p class="about-text" id="lng-about-text2">My most important project in this field has been /de/monument/AR/, which is, precisely, an educational app that worked in tandom with a real outdoors exposition via AR and game elements.</p>
+            <p class="about-text" id="lng-about-text3">The following are some important links:</p>
+            <div class="link">
+                <a class="about-text-link" href="http://demonumenta.fau.usp.br/" target="_blank" id="lng-link1">/de/monumenta website.</a>
+            </div>
+        </div>
+    </section>
+
+    <!-----footer----->
+
+    <div class="footer">
+        <div class="copyright">copyright © bruno stephan</div>
+    </div>
+
+    <script src="slider.js"></script>
+
+    <script>
+        const jsonPOR = {
+            "lng-about-text1": "Trabalhei com alguns aplicativos previamente. Na minha experiência, desenvolvê-los é como uma mistura entre design de UX/UI e design de games.",
+            "lng-about-text2": "Meu projeto mais importante neste campo foi até agora o /de/monument/AR/, que é, precisamente, um aplicativo educacional que funcionava em conjunto com uma exposição ao ar livre real via realidade aumentada e elementos de jogo.",
+            "lng-about-text3": "A seguir estão alguns links importantes:",
+            "lng-link1": "Site do /de/monumenta.",
+        }
+
+        const jsonENG = {
+            "lng-about-text1": "I have worked with a few apps before. In my experience, developing them is a mix between UX/UI design and game design.",
+            "lng-about-text2": "My most important project in this field has been /de/monument/AR/, which is, precisely, an educational app that worked in tandom with a real outdoors exposition via AR and game elements.",
+            "lng-about-text3": "The following are some important links:",
+            "lng-link1": "/de/monumenta website.",
+        }
+
+        document.querySelector('#language').addEventListener("change", function() {
+            if (this.value == "eng") {
+                // change all text to ENG
+                for (let key in jsonENG) {
+                document.querySelector('#' + key).textContent = jsonENG[key]
+                }
+            } else if (this.value == "por") {
+                // change all text to POR
+                for (let key in jsonPOR) {
+                document.querySelector('#' + key).textContent = jsonPOR[key]
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

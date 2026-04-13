@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>going meta</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="slider-style-5.css">
+    <script src="https://kit.fontawesome.com/bfc5e9503c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <!-----header----->
+
+    <section id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">home</a></li>
+                    <li>
+                        <select id="language" class="language">
+                            <option>eng</option>
+                            <option>por</option>
+                        </select>
+                    </li>
+                    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onClick="openMenu()"></i>
+            </nav>
+        </div>
+    </section>
+
+    <!-----slider----->
+        
+    <section class="slider">        
+        <div class="slider-content">
+
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
+            <input type="radio" name="btn-radio" id="radio4">
+            <input type="radio" name="btn-radio" id="radio5">
+
+            <div class="slide-box first">
+                <img class="img-desktop" src="sliders/going-meta/01.png" alt="slide 1">
+                <img class="img-mobile" src="sliders/going-meta/mobile/01mob.png" alt="slide 1 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/going-meta/02.png" alt="slide 2">
+                <img class="img-mobile" src="sliders/going-meta/mobile/02mob.png" alt="slide 2 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/going-meta/03.png" alt="slide 3">
+                <img class="img-mobile" src="sliders/going-meta/mobile/03mob.png" alt="slide 3 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/going-meta/04.png" alt="slide 4">
+                <img class="img-mobile" src="sliders/going-meta/mobile/04mob.png" alt="slide 4 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/going-meta/05.png" alt="slide 5">
+                <img class="img-mobile" src="sliders/going-meta/mobile/05mob.png" alt="slide 5 mobile">
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+            </div>
+
+        <div> 
+    </section>
+
+    <!-----about project----->
+
+    <section class="about-project">
+        <div class="container">
+            <h1 class="sub-title">going meta</h1>
+            <p class="about-text" id="lng-about-text1">Going Meta was made by three students in their spare time for Adventure Game Jam 2023.</p>
+            <p class="about-text" id="lng-about-text2">It is an atmospheric top-down adventure game where the world is threatened by a giant X-shaped object in the sky. You may have to build a Metaverse to escape from this bizarre situation - but is that really the only way to handle reality?</p>
+<!--             <div class="link">
+                <a class="about-text-link" href="https://ntmtst.itch.io/fome-pressa" target="_blank" id="lng-link">Learn more.</a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-----footer----->
+
+    <div class="footer">
+        <div class="copyright">copyright © bruno stephan</div>
+    </div>
+
+    <script src="slider.js"></script>
+
+    <script>
+        const jsonPOR = {
+            "lng-about-text1": "Esse jogo foi feito por 3 estudantes para a Adventure Game Jam 2023 nos seus horários livres.",
+            "lng-about-text2": "É um jogo de aventura atmosférica com visão de cima para baixo, onde o mundo é ameaçado por um gigantesco objeto em forma de X no céu. Talvez seja necessário construir um Metaverso para escapar dessa situação bizarra - mas será essa realmente a única maneira de lidar com a realidade?",
+            // "lng-link": "Saiba mais."
+        }
+
+        const jsonENG = {
+            "lng-about-text1": "Going Meta was made by three students in their spare time for Adventure Game Jam 2023.",
+            "lng-about-text2": "It is an atmospheric top-down adventure game where the world is threatened by a giant X-shaped object in the sky. You may have to build a Metaverse to escape from this bizarre situation - but is that really the only way to handle reality?",
+            // "lng-link": "Learn more."
+        }
+
+        document.querySelector('#language').addEventListener("change", function() {
+            if (this.value == "eng") {
+                // change all text to ENG
+                for (let key in jsonENG) {
+                document.querySelector('#' + key).textContent = jsonENG[key]
+                }
+            } else if (this.value == "por") {
+                // change all text to POR
+                for (let key in jsonPOR) {
+                document.querySelector('#' + key).textContent = jsonPOR[key]
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

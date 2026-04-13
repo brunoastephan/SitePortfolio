@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loneliness calls</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="slider-style-5.css">
+    <script src="https://kit.fontawesome.com/bfc5e9503c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <!-----header----->
+
+    <section id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">home</a></li>
+                    <li>
+                        <select id="language" class="language">
+                            <option>eng</option>
+                            <option>por</option>
+                        </select>
+                    </li>
+                    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onClick="openMenu()"></i>
+            </nav>
+        </div>
+    </section>
+
+    <!-----slider----->
+        
+    <section class="slider">        
+        <div class="slider-content">
+
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
+            <input type="radio" name="btn-radio" id="radio4">
+            <input type="radio" name="btn-radio" id="radio5">
+
+            <div class="slide-box first">
+                <img class="img-desktop" src="sliders/loneliness-calls/01.png" alt="slide 1">
+                <img class="img-mobile" src="sliders/loneliness-calls/mobile/01mob.png" alt="slide 1 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/loneliness-calls/02.png" alt="slide 2">
+                <img class="img-mobile" src="sliders/loneliness-calls/mobile/02mob.png" alt="slide 2 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/loneliness-calls/03.png" alt="slide 3">
+                <img class="img-mobile" src="sliders/loneliness-calls/mobile/03mob.png" alt="slide 3 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/loneliness-calls/04.png" alt="slide 4">
+                <img class="img-mobile" src="sliders/loneliness-calls/mobile/04mob.png" alt="slide 4 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/loneliness-calls/05.png" alt="slide 5">
+                <img class="img-mobile" src="sliders/loneliness-calls/mobile/05mob.png" alt="slide 5 mobile">
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+            </div>
+
+        <div> 
+    </section>
+
+    <!-----about project----->
+
+    <section class="about-project">
+        <div class="container">
+            <h1 class="sub-title">loneliness calls</h1>
+            <p class="about-text" id="lng-about-text1">A kind of cynical take on a puzzle/horror game in which you control the Homunculus, who doesn't want to leave his apartment. While doing its chores, it hears a strange phone ringing from behind the wall and then finds himself in a loop of apartments vaguely similar to the first one. Complete cryptic puzzles in order to traverse deeper into the apartment world.</p>
+            <div class="link">
+                <a class="about-text-link" href="https://brunoastephan.itch.io/lonelinesscalls" target="_blank" id="lng-link">Learn more.</a>
+            </div>
+        </div>
+    </section>
+
+    <!-----footer----->
+
+    <div class="footer">
+        <div class="copyright">copyright © bruno stephan</div>
+    </div>
+
+    <script src="slider.js"></script>
+
+    <script>
+        const jsonPOR = {
+            "lng-about-text1": "Uma espécie de visão cínica de um jogo de quebra-cabeça/terror no qual você controla o Homúnculo, que não quer sair de seu apartamento. Enquanto faz suas tarefas, ele ouve um estranho telefone tocando de trás da parede e então se vê preso em um ciclo de apartamentos vagamente semelhantes ao primeiro. Complete quebra-cabeças enigmáticos para adentrar cada vez mais no mundo dos apartamentos.",
+            "lng-link": "Saiba mais."
+        }
+
+        const jsonENG = {
+            "lng-about-text1": "A kind of cynical take on a puzzle/horror game in which you control the Homunculus, who doesn't want to leave his apartment. While doing its chores, it hears a strange phone ringing from behind the wall and then finds himself in a loop of apartments vaguely similar to the first one. Complete cryptic puzzles in order to traverse deeper into the apartment world.",
+            "lng-link": "Learn more."
+        }
+
+        document.querySelector('#language').addEventListener("change", function() {
+            if (this.value == "eng") {
+                // change all text to ENG
+                for (let key in jsonENG) {
+                document.querySelector('#' + key).textContent = jsonENG[key]
+                }
+            } else if (this.value == "por") {
+                // change all text to POR
+                for (let key in jsonPOR) {
+                document.querySelector('#' + key).textContent = jsonPOR[key]
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

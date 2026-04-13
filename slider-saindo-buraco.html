@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saindo do buraco</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="slider-style-3.css">
+    <script src="https://kit.fontawesome.com/bfc5e9503c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <!-----header----->
+
+    <section id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">home</a></li>
+                    <li>
+                        <select id="language" class="language">
+                            <option>eng</option>
+                            <option>por</option>
+                        </select>
+                    </li>
+                    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onClick="openMenu()"></i>
+            </nav>
+        </div>
+    </section>
+
+    <!-----slider----->
+        
+    <section class="slider">        
+        <div class="slider-content">
+
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
+
+            <div class="slide-box first">
+                <img class="img-desktop" src="sliders/saindo-buraco/01.png" alt="slide 1">
+                <img class="img-mobile" src="sliders/saindo-buraco/mobile/01mob.png" alt="slide 1 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/saindo-buraco/02.png" alt="slide 2">
+                <img class="img-mobile" src="sliders/saindo-buraco/mobile/02mob.png" alt="slide 2 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/saindo-buraco/03.png" alt="slide 3">
+                <img class="img-mobile" src="sliders/saindo-buraco/mobile/03mob.png" alt="slide 3 mobile">
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+
+        <div> 
+    </section>
+
+    <!-----about project----->
+
+    <section class="about-project">
+        <div class="container">
+            <h1 class="sub-title">saindo do buraco</h1>
+            <p class="about-text" id="lng-about-text1">Avoid 50 potholes to reach the address of your next delivery.</p>
+            <div class="link">
+                <a class="about-text-link" href="https://ntmtst.itch.io/saindo-do-buraco" target="_blank" id="lng-link">Learn more.</a>
+            </div>
+        </div>
+    </section>
+
+    <!-----footer----->
+
+    <div class="footer">
+        <div class="copyright">copyright © bruno stephan</div>
+    </div>
+
+    <script src="slider.js"></script>
+
+    <script>
+        const jsonPOR = {
+            "lng-about-text1": "Desvie de 50 buracos para chegar no endereço de sua próxima entrega.",
+            "lng-link": "Saiba mais."
+        }
+
+        const jsonENG = {
+            "lng-about-text1": "Avoid 50 potholes to reach the address of your next delivery.",
+            "lng-link": "Learn more."
+        }
+
+        document.querySelector('#language').addEventListener("change", function() {
+            if (this.value == "eng") {
+                // change all text to ENG
+                for (let key in jsonENG) {
+                document.querySelector('#' + key).textContent = jsonENG[key]
+                }
+            } else if (this.value == "por") {
+                // change all text to POR
+                for (let key in jsonPOR) {
+                document.querySelector('#' + key).textContent = jsonPOR[key]
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

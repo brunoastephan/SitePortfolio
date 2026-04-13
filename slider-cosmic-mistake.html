@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a cosmic mistake</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="slider-style-5.css">
+    <script src="https://kit.fontawesome.com/bfc5e9503c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <!-----header----->
+
+    <section id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">home</a></li>
+                    <li>
+                        <select id="language" class="language">
+                            <option>eng</option>
+                            <option>por</option>
+                        </select>
+                    </li>
+                    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onClick="openMenu()"></i>
+            </nav>
+        </div>
+    </section>
+
+    <!-----slider----->
+        
+    <section class="slider">        
+        <div class="slider-content">
+
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
+            <input type="radio" name="btn-radio" id="radio4">
+            <input type="radio" name="btn-radio" id="radio5">
+
+            <div class="slide-box first">
+                <img class="img-desktop" src="sliders/cosmic-mistake/01.png" alt="slide 1">
+                <img class="img-mobile" src="sliders/cosmic-mistake/mobile/01mob.png" alt="slide 1 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/cosmic-mistake/02.png" alt="slide 2">
+                <img class="img-mobile" src="sliders/cosmic-mistake/mobile/02mob.png" alt="slide 2 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/cosmic-mistake/03.png" alt="slide 3">
+                <img class="img-mobile" src="sliders/cosmic-mistake/mobile/03mob.png" alt="slide 3 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/cosmic-mistake/04.png" alt="slide 4">
+                <img class="img-mobile" src="sliders/cosmic-mistake/mobile/04mob.png" alt="slide 4 mobile">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="sliders/cosmic-mistake/05.png" alt="slide 5">
+                <img class="img-mobile" src="sliders/cosmic-mistake/mobile/05mob.png" alt="slide 5 mobile">
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+            </div>
+
+        <div> 
+    </section>
+
+    <!-----about project----->
+
+    <section class="about-project">
+        <div class="container">
+            <h1 class="sub-title">fenrir d. sparrow: a cosmic mistake</h1>
+            <p class="about-text" id="lng-about-text1">Fenrir D. Sparrow is your average cosmonaut in the distant future.</p>
+            <p class="about-text" id="lng-about-text2">One day, while exploring a distant planet, he found ancient alien technology that brought him to the 5th dimension.</p>
+            <p class="about-text" id="lng-about-text3">That dimension is known to us, humans, as "LYSERGIC MUSIC".</p>
+            <p class="about-text" id="lng-about-text4">Now he has to make his way to God in order to be a normal three dimensional human being again. Can you help him?</p>
+            <div class="link">
+                <a class="about-text-link" href="https://brunoastephan.itch.io/a-cosmic-mistake" target="_blank" id="lng-link">Learn more.</a>
+            </div>
+        </div>
+    </section>
+
+    <!-----footer----->
+
+    <div class="footer">
+        <div class="copyright">copyright © bruno stephan</div>
+    </div>
+
+    <script src="slider.js"></script>
+
+    <script>
+        const jsonPOR = {
+            "lng-about-text1": "Fenrir D. Sparrow é um cosmonauta comum em um futuro distante.",
+            "lng-about-text2": "Um dia, ao explorar um planeta distante, ele encontrou uma tecnologia alienígena antiga que o trouxe para a 5ª dimensão.",
+            "lng-about-text3": "Essa dimensão é conhecida por nós, seres humanos, como \"MÚSICA LISÉRGICA\".",
+            "lng-about-text4": "Agora ele vai ter que flutuar até Deus para se tornar um ser humano tridimensional novamente. Você consegue ajudá-lo?",
+            "lng-link": "Saiba mais."
+        }
+
+        const jsonENG = {
+            "lng-about-text1": "Fenrir D. Sparrow is your average cosmonaut in the distant future.",
+            "lng-about-text2": "One day, while exploring a distant planet, he found ancient alien technology that brought him to the 5th dimension.",
+            "lng-about-text3": "That dimension is known to us, humans, as \"LYSERGIC MUSIC\".",
+            "lng-about-text4": "Now he has to make his way to God in order to be a normal three dimensional human being again. Can you help him?",
+            "lng-link": "Learn more."
+        }
+
+        document.querySelector('#language').addEventListener("change", function() {
+            if (this.value == "eng") {
+                // change all text to ENG
+                for (let key in jsonENG) {
+                document.querySelector('#' + key).textContent = jsonENG[key]
+                }
+            } else if (this.value == "por") {
+                // change all text to POR
+                for (let key in jsonPOR) {
+                document.querySelector('#' + key).textContent = jsonPOR[key]
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

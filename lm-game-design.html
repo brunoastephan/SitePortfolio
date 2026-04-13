@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game design</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="lm-style.css">
+    <script src="https://kit.fontawesome.com/bfc5e9503c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <!-----header----->
+
+    <section id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">home</a></li>
+                    <li>
+                        <select id="language" class="language">
+                            <option>eng</option>
+                            <option>por</option>
+                        </select>
+                    </li>
+                    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onClick="openMenu()"></i>
+            </nav>
+        </div>
+    </section>
+
+    <!-----about project----->
+
+    <section class="about-project">
+        <div class="container">
+            <h1 class="sub-title">game design</h1>
+            <p class="about-text" id="lng-about-text1">It is my main activity right now. I have been designing games independently in the past years and I am currently looking for a full-time job in this field.</p>
+            <p class="about-text" id="lng-about-text2">I am presently focused in two projects, mostly: finishing Rogue Fungi, a card game that is in later stages of development; and my volunteer work at NTMTST, a group that creates games depicting recent political events.</p>
+            <p class="about-text" id="lng-about-text3">The following are some important links:</p>
+            <div class="link">
+                <a class="about-text-link" href="https://nucleodetecnologia.com.br/games-presskit/" target="_blank" id="lng-link1">NTMTST presskit.</a>
+            </div>
+            <div class="link">
+                <a class="about-text-link" href="https://brunoastephan.itch.io/" target="_blank" id="lng-link2">My Itch.io page.</a>
+            </div>
+        </div>
+    </section>
+
+    <!-----footer----->
+
+    <div class="footer">
+        <div class="copyright">copyright © bruno stephan</div>
+    </div>
+
+    <script src="slider.js"></script>
+
+    <script>
+        const jsonPOR = {
+            "lng-about-text1": "O design de jogos é a minha atividade primária atualmente. Fiz alguns jogos independentes nos últimos anos e estou procurando um emprego integral nesse campo.",
+            "lng-about-text2": "Atualmente, estou focado sobretudo em dois projetos: finalizar o Rogue Fungi, um jogo de cartas que está em estágios avançados de desenvolvimento; e meu trabalho voluntário no NTMTST, um grupo que cria jogos retratando os últimos acontecimentos políticos.",
+            "lng-about-text3": "A seguir estão alguns links importantes:",
+            "lng-link1": "Presskit do NTMTST.",
+            "lng-link2": "Minha página Itch.io."
+        }
+
+        const jsonENG = {
+            "lng-about-text1": "It is my main activity right now. I have been designing games independently in the past years and I am currently looking for a full-time job in this field.",
+            "lng-about-text2": "I am presently focused in two projects, mostly: finishing Rogue Fungi, a card game that is in later stages of development; and my volunteer work at NTMTST, a group that creates games depicting recent political events.",
+            "lng-about-text3": "The following are some important links:",
+            "lng-link1": "NTMTST presskit.",
+            "lng-link2": "My Itch.io page."
+        }
+
+        document.querySelector('#language').addEventListener("change", function() {
+            if (this.value == "eng") {
+                // change all text to ENG
+                for (let key in jsonENG) {
+                document.querySelector('#' + key).textContent = jsonENG[key]
+                }
+            } else if (this.value == "por") {
+                // change all text to POR
+                for (let key in jsonPOR) {
+                document.querySelector('#' + key).textContent = jsonPOR[key]
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web design</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="lm-style.css">
+    <script src="https://kit.fontawesome.com/bfc5e9503c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <!-----header----->
+
+    <section id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">home</a></li>
+                    <li>
+                        <select id="language" class="language">
+                            <option>eng</option>
+                            <option>por</option>
+                        </select>
+                    </li>
+                    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onClick="openMenu()"></i>
+            </nav>
+        </div>
+    </section>
+
+    <!-----about project----->
+
+    <section class="about-project">
+        <div class="container">
+            <h1 class="sub-title">web design</h1>
+            <p class="about-text" id="lng-about-text1">I have been studying web design in the past years with some help from my university colleagues. The free courses ministered by USPCodeLab specifically were paramount in my introduction to web designing.</p>
+            <p class="about-text" id="lng-about-text2">This portfolio by myself from scratch in vanilla HTML/CSS/Javascript with the knowledge acquired during their classes. I intend to do much more in the future, such as updating this page constantly, for example.</p>
+            <p class="about-text" id="lng-about-text3">The following are some important links:</p>
+            <div class="link">
+                <a class="about-text-link" href="https://codelab.ime.usp.br/#/" target="_blank" id="lng-link1">USPCodeLab website.</a>
+            </div>
+            <div class="link">
+                <a class="about-text-link" href="https://codepen.io/brunoastephan" target="_blank" id="lng-link2">My CodePen page.</a>
+            </div>
+        </div>
+    </section>
+
+    <!-----footer----->
+
+    <div class="footer">
+        <div class="copyright">copyright © bruno stephan</div>
+    </div>
+
+    <script src="slider.js"></script>
+
+    <script>
+        const jsonPOR = {
+            "lng-about-text1": "Eu tenho estudado design de websites nos últimos anos com alguma ajuda dos meus colegas da universidade. Os cursos gratuitos ministrados pelo USPCodeLab foram especialmente importantes na minha introdução ao assunto.",
+            "lng-about-text2": "Este portfólio foi criado por mim do zero em HTML/CSS/Javascript puro com o conhecimento adquirido durante as aulas deles. Pretendo fazer muito mais no futuro, como atualizar esta página constantemente.",
+            "lng-about-text3": "A seguir estão alguns links importantes:",
+            "lng-link1": "Site do USPCodeLab.",
+            "lng-link2": "Minha página CodePen."
+        }
+
+        const jsonENG = {
+            "lng-about-text1": "I have been studying web design in the past years with some help from my university colleagues. The free courses ministered by USPCodeLab specifically were paramount in my introduction to web designing.",
+            "lng-about-text2": "This portfolio by myself from scratch in vanilla HTML/CSS/Javascript with the knowledge acquired during their classes. I intend to do much more in the future, such as updating this page constantly, for example.",
+            "lng-about-text3": "The following are some important links:",
+            "lng-link1": "USPCodeLab website.",
+            "lng-link2": "My Itch.io page."
+        }
+
+        document.querySelector('#language').addEventListener("change", function() {
+            if (this.value == "eng") {
+                // change all text to ENG
+                for (let key in jsonENG) {
+                document.querySelector('#' + key).textContent = jsonENG[key]
+                }
+            } else if (this.value == "por") {
+                // change all text to POR
+                for (let key in jsonPOR) {
+                document.querySelector('#' + key).textContent = jsonPOR[key]
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>
